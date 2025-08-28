@@ -1,118 +1,42 @@
-/* MJH Plumbing & Heating — lightweight, GitHub Pages‑friendly */
-:root{
-  --brand:#12c7d2;       /* pulled from logo glow */
-  --brand-dark:#0ea3ad;
-  --ink:#0f172a;
-  --muted:#64748b;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --line:#e5e7eb;
-  --radius:18px;
-}
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.6;
-}
-
+/* MJH Plumbing & Heating */
+:root{--brand:#12c7d2;--brand-dark:#0ea3ad;--ink:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#ffffff;--line:#e5e7eb;--radius:18px}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 .wrap{max-width:1060px;margin:0 auto;padding:clamp(16px,4vw,28px)}
-
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
 .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
 .head-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand img{height:56px;display:block}
-
+.brand img{height:88px;display:block}
 .nav{display:flex;gap:14px;align-items:center}
 .nav a{color:var(--ink);text-decoration:none;font-weight:600}
 .nav .btn{margin-left:6px}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:2px solid var(--brand);padding:.65rem 1rem;font-weight:700;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:2px solid var(--brand);padding:.8rem 1.15rem;font-weight:800;text-decoration:none}
 .btn-solid{background:var(--brand);color:#fff;border-color:var(--brand)}
 .btn-outline{background:transparent;color:var(--brand);border-color:var(--brand)}
-.btn:hover{filter:brightness(.95)}
-
-/* Hero */
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg);
-  background-image:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);
-  background-size:100% 100%, cover;
-  background-repeat:no-repeat;
-  background-position:center;
-  --img:var(--bg);
-}
-.hero{background-image:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background-image:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), #0000}
-.hero{background-image:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{position:relative;color:#062a2e}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background-image: var(--bg), var(--bg);
-  background-image: var(--bg);
-  background: var(--bg);
-  background: radial-gradient(100% 120% at 50% 0%, rgba(0,0,0,.35), rgba(0,0,0,.0) 50%) , var(--bg);
-  opacity:.28;pointer-events:none
-}
-.hero{background-image: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);background: center/cover no-repeat, center/cover no-repeat}
-.hero{background-image: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);}
-.hero{background-image: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);}
-.hero{background: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);background-image: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg)}
-.hero{background: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);}
-.hero{background: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);}
-.hero{background: linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg), var(--bg);}
-.hero{background-image:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), var(--bg);}
-.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), url('assets/hero.avif') center/cover no-repeat}
+.hero{background:linear-gradient(180deg, rgba(18,199,210,.85), rgba(18,199,210,.65)), url('assets/hero.avif') center/cover no-repeat;position:relative;color:#062a2e}
 .hero-inner{padding:clamp(56px,8vw,120px) 0;text-align:center}
 .hero-title{margin:0 0 .5rem;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.2;color:#fff}
 .hero-sub{color:#e6fffe;margin:0 0 1.2rem;font-size:clamp(1rem,2.2vw,1.25rem)}
 .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
-/* Badges */
-.badges{background:#fff;border-bottom:1px solid var(--line)}
-.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.badge{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.6rem 1rem;text-align:center;font-weight:700}
-
-/* Cards */
-.card-grid{margin-top:28px}
 .card-grid .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.05)}
 .card img{width:100%;height:180px;object-fit:cover;border-radius:12px}
-.card h3{margin:.75rem 0 .25rem}
-.card p{color:var(--muted)}
-
-/* About */
-.about{margin-top:20px}
-.ticks{padding-left:18px}
-.ticks li{margin:.25rem 0}
-
-/* Areas */
-.areas .map-link{font-weight:700;text-decoration:none;color:var(--brand)}
-
-/* Contact */
-.contact{margin-top:28px}
-.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.contact-form label{display:flex;flex-direction:column;gap:6px}
-.contact-form input,.contact-form textarea{border:1px solid var(--line);border-radius:10px;padding:.7rem;font:inherit}
-.contact-form .wide{grid-column:1/-1}
-.form-cta{display:flex;gap:10px;align-items:center;margin-top:.25rem}
-.form-note{color:var(--muted);font-size:.9rem}
-
-/* Footer */
 .site-footer{border-top:1px solid var(--line);background:#fff;margin-top:36px}
 .foot-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.site-footer a{color:var(--brand);text-decoration:none}
+@media (max-width:900px){.card-grid .grid{grid-template-columns:1fr}}
 
-/* Responsive */
-@media (max-width:900px){
-  .card-grid .grid,.grid-3{grid-template-columns:1fr}
-  .contact-form{grid-template-columns:1fr}
+
+/* Emphasise call actions */
+.btn-call,
+.btn[href^="tel:"]{
+  background:linear-gradient(180deg,var(--brand),var(--brand-dark));
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 8px 22px rgba(18,199,210,.35);
 }
+.btn-call:hover,
+.btn[href^="tel:"]:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 28px rgba(18,199,210,.45);
+}
+.hero-cta .btn-call{font-size:1.08rem;padding:1rem 1.35rem}
