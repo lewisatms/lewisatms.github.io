@@ -1,12 +1,4 @@
-Your CSS is already structured, but here are three improvements for clarity and polish:
 
-1. **Consistent comments** – group sections clearly so future edits are easier.
-2. **Whitespace** – improve readability with spacing around large blocks.
-3. **Small refinements** – align footer & header styles, improve mobile readability, and add subtle hover/focus transitions for links.
-
----
-
-```css
 /* ================= Base & Tokens ================ */
 :root {
   --brand:#0b5e63;           /* deep teal */
