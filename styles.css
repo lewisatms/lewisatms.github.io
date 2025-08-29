@@ -273,3 +273,15 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .toplink{ color:#cfeff2; }
 .toplink:hover{ color:#fff; }
 
+/* Reduce CLS: reserve space for sticky header */
+.site-header { min-height: 86px; }
+
+/* Improve tap targets on mobile nav */
+@media (max-width:760px){
+  .nav a { padding:.7rem 1rem; }
+}
+
+/* Better status colours for light/dark footers */
+.form-status.ok{ color:#137a3b; }
+.form-status.err{ color:#b00020; }
+
