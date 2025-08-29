@@ -197,3 +197,27 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
 }
+
+
+/* --- Header adjustments --- */
+
+/* Bigger logo */
+.brand img {
+  height: 110px;  /* was 88px */
+  max-width: none;
+}
+
+/* Header button (Contact) refinement */
+.nav .btn {
+  padding: .6rem 1.2rem;
+  font-weight: 800;
+  border-radius: 999px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  color:#fff !important;
+  box-shadow:0 3px 6px rgba(0,0,0,.15);
+  transition:background .2s ease,transform .08s ease;
+}
+.nav .btn:hover {
+  filter:brightness(1.1);
+  transform:translateY(-1px);
+}
