@@ -70,14 +70,16 @@
         <source srcset="assets/boiler-repair.webp" type="image/webp">
         <img class="hero-bg" src="assets/boiler-repair.jpg" alt="" decoding="async" width="1920" height="1080" />
       </picture>
+
       <div class="wrap hero-inner">
         <h1 class="hero-title">Plumbing &amp; Heating Specialists in Willand, Devon</h1>
         <p class="hero-sub">Boiler servicing &amp; repairs • New installations • Bathrooms • Emergencies</p>
-        <span class="pill">Gas Safe • Fully insured • Local</span>
+
         <div class="hero-cta">
           <a class="btn btn-solid btn-call" href="tel:+447000000000">Call 07000 000000</a>
           <a class="btn btn-outline" href="mailto:hello@mjh-plumbing.co.uk?subject=Enquiry">Email us</a>
         </div>
+
         <ul class="trust-inline" aria-label="Key reasons to choose us">
           <li>Fast response</li>
           <li>Clear pricing</li>
@@ -86,18 +88,6 @@
         </ul>
       </div>
     </section>
-
-    <section class="section" aria-label="Accreditations and assurances">
-  <div class="wrap trust-rail">
-    <ul>
-      <li>Gas Safe Registered</li>
-      <li>Fully insured</li>
-      <li>12-month workmanship guarantee</li>
-      <li>Card payments accepted</li>
-    </ul>
-  </div>
-</section>
-
 
     <!-- Contact -->
     <section class="section contact-up" id="contact" aria-labelledby="contact-title">
@@ -114,9 +104,7 @@
         </div>
 
         <!-- Formspree-powered form -->
-        <form id="enquiryForm" class="contact-form card"
-              action="https://formspree.io/f/xjkegzae"
-              method="POST" novalidate>
+        <form id="enquiryForm" class="contact-form card" action="https://formspree.io/f/xjkegzae" method="POST" novalidate>
           <!-- spam traps -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px" aria-hidden="true">
           <input type="hidden" name="_subject" value="New enquiry — MJH Plumbing & Heating">
@@ -151,7 +139,6 @@
     <section class="section" id="services" aria-labelledby="services-title">
       <div class="wrap">
         <h2 class="h2" id="services-title">What we do</h2>
-
         <div class="grid-4">
           <article class="card pro">
             <img src="assets/boiler-repair.jpg" alt="Engineer working on a boiler" loading="lazy" width="800" height="500">
@@ -284,48 +271,51 @@
 
   <!-- Small helpers -->
   <script>
-    // Current year
-    document.getElementById('y').textContent = new Date().getFullYear();
+  // Current year
+  document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Mobile nav aria-expanded
-    (function(){
-      const navToggle = document.getElementById('nav-toggle');
-      const burger = document.querySelector('label.nav-burger');
-      if (!navToggle || !burger) return;
-      const update = () => burger.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
-      burger.setAttribute('role','button');
-      burger.setAttribute('aria-controls','primary-nav');
-      update();
-      navToggle.addEventListener('change', update);
-    })();
+  // Mobile nav aria-expanded
+  (function(){
+    const navToggle = document.getElementById('nav-toggle');
+    const burger = document.querySelector('label.nav-burger');
+    if (!navToggle || !burger) return;
+    const update = () => burger.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+    burger.setAttribute('role','button');
+    burger.setAttribute('aria-controls','primary-nav');
+    update();
+    navToggle.addEventListener('change', update);
+  })();
 
-    // Formspree AJAX status
-    (function(){
-      const form = document.getElementById('enquiryForm');
-      const statusEl = document.getElementById('formStatus');
-      if (!form || !statusEl) return;
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        statusEl.textContent = 'Sending…';
-        statusEl.className = 'form-status';
-        const data = new FormData(form);
-        try {
-          const r = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-          if (r.ok) {
-            form.reset();
-            statusEl.textContent = 'Thanks — we’ll be in touch shortly.';
-            statusEl.className = 'form-status ok';
-          } else {
-            statusEl.textContent = 'Something went wrong. Please call us.';
-            statusEl.className = 'form-status err';
-          }
-        } catch {
-          statusEl.textContent = 'Network error. Please try again or call.';
+  // Formspree AJAX status
+  (function(){
+    const form = document.getElementById('enquiryForm');
+    const statusEl = document.getElementById('formStatus');
+    if (!form || !statusEl) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending…';
+      statusEl.className = 'form-status';
+      const data = new FormData(form);
+      try {
+        const r = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (r.ok) {
+          form.reset();
+          statusEl.textContent = 'Thanks — we’ll be in touch shortly.';
+          statusEl.className = 'form-status ok';
+        } else {
+          statusEl.textContent = 'Something went wrong. Please call us.';
           statusEl.className = 'form-status err';
         }
-      });
-    })();
+      } catch {
+        statusEl.textContent = 'Network error. Please try again or call.';
+        statusEl.className = 'form-status err';
+      }
+    });
+  })();
   </script>
-  <a class="callbar" href="tel:+447000000000" aria-label="Call MJH Plumbing and Heating">📞 Call 07000 000000</a>
 </body>
 </html>
