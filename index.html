@@ -4,90 +4,190 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MJH Plumbing & Heating | Willand, Devon</title>
-  <meta name="description" content="MJH Plumbing & Heating — local, reliable boiler servicing, repairs, and plumbing in Willand and across Mid Devon." />
+  <meta name="description" content="Local, reliable plumbing and heating in Willand and across Mid Devon. Boiler servicing & repairs, new installs, bathrooms and emergencies." />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="wrap head-row">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="MJH Plumbing & Heating home">
         <img src="assets/logo.png" alt="MJH Plumbing and Heating logo">
-        <span class="sr-only">MJH Plumbing & Heating</span>
       </a>
       <nav class="nav">
         <a href="#services">Services</a>
+        <a href="#why">Why MJH</a>
         <a href="#areas">Areas</a>
-        <a href="#about">About</a>
         <a href="#contact" class="btn btn-solid">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="top" style="--bg:url('assets/hero.avif')">
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <img class="hero-bg" src="assets/boiler-repair.jpg" alt="" decoding="async" />
     <div class="wrap hero-inner">
-      <h1 class="hero-title">Local Plumbing & Heating Specialists in Willand</h1>
+      <h1 class="hero-title">Plumbing & Heating Specialists in Willand, Devon</h1>
       <p class="hero-sub">Boiler servicing & repairs • New installations • Bathrooms • Emergencies</p>
       <div class="hero-cta">
-        <a class="btn btn-solid btn-call" href="tel:+447000000000" aria-label="Call MJH Plumbing and Heating">Call 07000 000000</a>
-        <a class="btn btn-outline" href="mailto:hello@mjh-plumbing.co.uk?subject=Enquiry" aria-label="Email MJH">Email us</a>
+        <a class="btn btn-solid btn-call" href="tel:+447000000000">Call 07000 000000</a>
+        <a class="btn btn-outline" href="mailto:hello@mjh-plumbing.co.uk?subject=Enquiry">Email us</a>
+      </div>
+      <ul class="trust-inline">
+        <li>Fast response</li>
+        <li>Clear pricing</li>
+        <li>Fully insured</li>
+        <li>Friendly & local</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2 class="h2">What we do</h2>
+      <div class="grid-4">
+        <article class="card pro">
+          <img src="assets/boiler-repair.jpg" alt="Engineer working on a boiler">
+          <h3>Boiler servicing & repairs</h3>
+          <p>Diagnostics and fixes for all makes and models. Keep your system safe and efficient.</p>
+        </article>
+        <article class="card pro">
+          <img src="assets/services.avif" alt="New boiler installation">
+          <h3>New boiler installs</h3>
+          <p>High-efficiency boilers, smart controls and pipework installed neatly and professionally.</p>
+        </article>
+        <article class="card pro">
+          <img src="assets/services.avif" alt="Radiators and heating">
+          <h3>Heating & radiators</h3>
+          <p>Upgrades, flushes, balancing and troubleshooting uneven heating or noisy systems.</p>
+        </article>
+        <article class="card pro">
+          <img src="assets/services.avif" alt="Bathroom fitting and plumbing">
+          <h3>Bathrooms & plumbing</h3>
+          <p>From leaks and taps to full bathroom refits — tidy workmanship and clear communication.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <main class="wrap">
-    <section id="services" class="card-grid">
-      <h2>What we do</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="assets/boiler-repair.jpg" alt="Engineer working on a boiler">
-          <h3>Boiler servicing & repairs</h3>
-          <p>All makes and models, diagnostics and fixes to keep your heating running safely and efficiently.</p>
-        </article>
-        <article class="card">
-          <img src="assets/services.avif" alt="Plumbing toolkit">
-          <h3>New installations</h3>
-          <p>High-efficiency boilers, radiators, smart controls and full heating systems, professionally installed.</p>
-        </article>
-        <article class="card">
-          <img src="assets/services.avif" alt="Bathroom installation">
-          <h3>Bathrooms & plumbing</h3>
-          <p>From leaks and taps to full bathroom refits — tidy workmanship and clear pricing.</p>
-        </article>
+  <!-- Why MJH -->
+  <section class="feature" id="why">
+    <div class="wrap feature-inner">
+      <div class="feature-copy">
+        <h2 class="h2">Why choose MJH</h2>
+        <ul class="ticks">
+          <li>Local to Willand with quick, reliable arrival times</li>
+          <li>Fair, transparent quotes — no surprises</li>
+          <li>Careful, clean work and respect for your home</li>
+          <li>Helpful aftercare and ongoing support</li>
+        </ul>
+        <div class="stack-sm">
+          <a class="btn btn-solid btn-call" href="tel:+447000000000">Call 07000 000000</a>
+          <a class="btn btn-outline" href="#contact">Request a quote</a>
+        </div>
       </div>
-    </section>
+      <div class="feature-media">
+        <img src="assets/hero.avif" alt="Plumbing toolkit">
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact card">
-      <h2>Get a fast quote</h2>
-      <p>Tell us what you need and how to reach you. We’ll get back quickly.</p>
-      <form class="contact-form" action="mailto:hello@mjh-plumbing.co.uk" method="post" enctype="text/plain">
-        <label>
-          <span>Name</span>
-          <input required type="text" name="name" placeholder="Your name">
-        </label>
-        <label>
-          <span>Phone</span>
-          <input required type="tel" name="phone" placeholder="07…">
-        </label>
-        <label class="wide">
-          <span>Job details</span>
-          <textarea required name="message" rows="4" placeholder="Tell us about the issue or job"></textarea>
-        </label>
+  <!-- CTA strip -->
+  <section class="cta-band">
+    <div class="wrap cta-row">
+      <p class="cta-text"><strong>Need help fast?</strong> Same-day appointments often available in Willand & Mid Devon.</p>
+      <a class="btn btn-solid btn-call" href="tel:+447000000000">Call now</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="wrap">
+      <h2 class="h2">Recent feedback</h2>
+      <div class="quotes">
+        <figure>
+          <blockquote>Turned up on time, explained everything clearly and left the place spotless. Great value.</blockquote>
+          <figcaption>— Homeowner, Willand</figcaption>
+        </figure>
+        <figure>
+          <blockquote>Diagnosed our boiler issue quickly and had heat back the same day. Highly recommend.</blockquote>
+          <figcaption>— Customer, Cullompton</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section class="section" id="areas">
+    <div class="wrap">
+      <h2 class="h2">Areas we cover</h2>
+      <p class="lead">Based in <strong>Willand</strong>, serving Mid Devon and surrounds.</p>
+      <ul class="areas-grid">
+        <li>Willand</li><li>Cullompton</li><li>Uffculme</li><li>Tiverton</li>
+        <li>Exeter</li><li>Taunton</li><li>Bradninch</li><li>Burlescombe</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info card">
+        <h2 class="h2">Get a fast quote</h2>
+        <p class="lead">Tell us what you need and how to reach you — we’ll respond quickly.</p>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> <a class="tel" href="tel:+447000000000">07000 000000</a></li>
+          <li><strong>Email:</strong> <a href="mailto:hello@mjh-plumbing.co.uk">hello@mjh-plumbing.co.uk</a></li>
+          <li><strong>Base:</strong> Willand, Devon</li>
+        </ul>
+        <p class="muted">Simple email form below (GitHub Pages compatible). For urgent issues, please call.</p>
+      </div>
+
+      <form class="contact-form card" action="mailto:hello@mjh-plumbing.co.uk" method="post" enctype="text/plain">
+        <label><span>Name</span><input required type="text" name="name" placeholder="Your name"></label>
+        <label><span>Phone</span><input required type="tel" name="phone" placeholder="07…"></label>
+        <label class="wide"><span>Job details</span><textarea required name="message" rows="5" placeholder="Tell us about the issue or job"></textarea></label>
         <div class="form-cta">
-          <button class="btn btn-solid" type="submit">Send</button>
-          <a class="btn btn-call btn-outline" href="tel:+447000000000">Prefer to talk?</a>
+          <button class="btn btn-solid btn-call" type="submit">Send</button>
+          <a class="btn btn-outline" href="tel:+447000000000">Prefer to talk?</a>
         </div>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="wrap foot-row">
-      <p>&copy; <span id="y"></span> MJH Plumbing & Heating • Willand, Devon</p>
+    <div class="wrap footer-cols">
+      <div>
+        <h4>MJH Plumbing & Heating</h4>
+        <p class="muted">Willand, Devon • Local plumbing and heating services across Mid Devon.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="foot-list">
+          <li>Boiler servicing & repairs</li>
+          <li>New boiler installs</li>
+          <li>Heating & radiators</li>
+          <li>Bathrooms & plumbing</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-list">
+          <li><a href="tel:+447000000000">07000 000000</a></li>
+          <li><a href="mailto:hello@mjh-plumbing.co.uk">hello@mjh-plumbing.co.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <p>&copy; <span id="y"></span> MJH Plumbing & Heating</p>
     </div>
   </footer>
+
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
