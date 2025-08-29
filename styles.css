@@ -108,6 +108,26 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .card.pro h3{margin:.7rem 0 .25rem}
 .card.pro p{color:var(--muted);margin:0}
 
+/* Services (icons) */
+.card.pro .pro-icon{
+  display:grid;place-items:center;
+  width:100%;aspect-ratio:16/10;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:linear-gradient(180deg,#ffffff, var(--bg-soft));
+  box-shadow:0 8px 18px rgba(0,0,0,.04) inset;
+  margin:0 0 .7rem;
+}
+.card.pro .pro-icon svg{
+  width:64px;height:64px;
+  fill:var(--brand);
+}
+.card.pro .pro-icon-alt svg{ fill:var(--brand-2); }
+.card.pro .pro-icon-soft{
+  background:linear-gradient(180deg,#fff, #f7fafb);
+}
+
+
 /* ---------- Feature band ---------- */
 .feature{background:linear-gradient(180deg,#fff, var(--bg-soft));border-block:1px solid var(--line)}
 .feature-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
