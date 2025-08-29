@@ -285,3 +285,64 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .form-status.ok{ color:#137a3b; }
 .form-status.err{ color:#b00020; }
 
+/* === Section contrast & separation === */
+.section{ position:relative; isolation:isolate; }
+main .section:nth-of-type(even){
+  background:var(--bg-soft);
+  border-block:1px solid var(--line);
+}
+main .section:nth-of-type(odd){
+  background:var(--bg);
+  border-block:1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+/* Top/bottom fade to lift panels off the page (very subtle) */
+.section::before,
+.section::after{
+  content:""; position:absolute; left:0; right:0; height:22px; z-index:0;
+  pointer-events:none;
+}
+.section::before{ top:-22px; background:linear-gradient(180deg,rgba(0,0,0,.04),transparent); }
+.section::after { bottom:-22px; background:linear-gradient(0deg,rgba(0,0,0,.04),transparent); }
+
+/* Headings: small brand accent bar + spacing */
+.h2{
+  position:relative; padding-top:6px; margin-bottom:16px;
+}
+.h2::before{
+  content:""; position:absolute; top:0; left:0; width:48px; height:4px; border-radius:4px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+}
+
+/* Cards: slightly stronger elevation so they 'pop' from soft sections */
+.card{
+  box-shadow: 0 12px 28px rgba(0,0,0,.08), 0 2px 0 rgba(0,0,0,.03);
+}
+
+/* Services grid: add a faint outline so each tile stands out on soft bg */
+.grid-4 .card.pro{
+  border:1px solid color-mix(in srgb, var(--line) 85%, transparent);
+}
+
+/* Testimonials: stronger blockquote edge on soft bg */
+.testimonials blockquote{
+  border-left-color: color-mix(in srgb, var(--brand) 85%, #fff);
+}
+
+/* CTA band: add slight shadow so it sits above adjacent sections */
+.cta-band{
+  position:relative; z-index:1;
+  box-shadow:0 12px 24px rgba(0,0,0,.12);
+}
+
+/* Footer separator from last section */
+.site-footer{ border-top: none; }
+.site-footer::before{ /* already defined; make sure it shows clearly */
+  box-shadow: 0 -8px 24px rgba(0,0,0,.15) inset;
+}
+
+/* Mobile: keep separation without heavy borders */
+@media (max-width:760px){
+  .section::before, .section::after{ height:16px; }
+}
+
