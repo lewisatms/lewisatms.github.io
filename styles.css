@@ -291,3 +291,44 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   }
 }
 
+/* --- Mobile fixes: prevent bullets/icons overlapping text --- */
+@media (max-width: 600px){
+  /* Stack the service cards in a single column */
+  .grid-4 { 
+    display: block !important;
+  }
+  .grid-4 .card.pro {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  /* Make the service "pro-icon" behave like a normal block, not absolutely positioned */
+  .pro .pro-icon,
+  .pro .pro-icon-alt,
+  .pro .pro-icon-soft {
+    position: static !important;
+    display: inline-block;
+    margin: 0 0 .5rem 0;
+    transform: none !important;
+  }
+
+  /* Ensure any list with decorative bullets doesn't overlap copy */
+  .ticks li,
+  .trust-inline li,
+  .areas-grid li {
+    position: relative;
+    overflow: hidden;
+  }
+  .ticks li::before,
+  .trust-inline li::before,
+  .areas-grid li::before {
+    position: static !important;   /* stop absolutely-positioned bullets */
+    margin-right: .5rem;
+  }
+}
+
+/* Safety net: if icons were layered with z-index elsewhere */
+.card.pro, .feature-copy, .feature-media, .section {
+  z-index: 1;
+  position: relative;
+}
