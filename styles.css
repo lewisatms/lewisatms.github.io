@@ -262,3 +262,25 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   filter: brightness(1.08);
   transform: translateY(-1px);
 }
+
+/* Stop gradient bleeding under transparent borders */
+.btn {
+  background-clip: padding-box;   /* key line */
+}
+
+/* Solid buttons shouldn't keep a transparent border */
+.btn-solid {
+  border: 0;                       /* avoid edge seam */
+}
+
+/* If you want a subtle edge on solid buttons, use a faint real border */
+.btn-solid {
+  border: 1px solid rgba(0,0,0,.06);  /* optional; looks cleaner than transparent */
+}
+
+/* Header Contact button inherits .btn; keep it crisp too */
+.nav .btn {
+  background-clip: padding-box;
+  border: 0;  /* remove transparent border for the gradient pill */
+}
+
