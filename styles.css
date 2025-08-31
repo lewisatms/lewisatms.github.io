@@ -246,3 +246,48 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   color:#fff !important;box-shadow:0 3px 6px rgba(0,0,0,.15)
 }
 .nav .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+
+/* --- Button edge colour fix (paste at end) --- */
+/* Remove the transparent border fringe and push gradients past the right edge */
+.btn,
+.mobile-cta-btn,
+.nav .btn{
+  border: 0;                 /* stop transparent-border halo */
+  background-clip: padding-box;
+}
+
+/* Solid brand buttons */
+.btn-solid,
+.mobile-cta-btn{
+  background-image: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 120%);
+}
+
+/* Header "Contact" button (keeps your orange look, fixes the edge) */
+.nav .btn{
+  background-image: linear-gradient(90deg, #e27935 0%, #b75536 120%);
+}
+
+/* Outline stays outlined (explicitly restore its border) */
+.btn-outline{
+  border: 2px solid var(--brand);
+  background-clip: border-box;
+}
+
+/* Optional: slightly stronger hover lift now that border is gone */
+.btn:hover,
+.mobile-cta-btn:hover,
+.nav .btn:hover{
+  transform: translateY(-1px);
+}
+
+/* --- Banner (hero) image focus moved up --- */
+/* Lift the focal point on wide screens; nudge differently on mobile */
+.hero picture img.hero-bg{
+  object-position: 50% 24%;  /* was 68% center; show more upper area */
+}
+@media (max-width: 760px){
+  .hero picture img.hero-bg{
+    object-position: 50% 34%;
+  }
+}
+
