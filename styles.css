@@ -103,19 +103,24 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 
 /* Trust line: prevent bullet overlap */
 .trust-inline { 
-  list-style: none;          /* kill native bullets */
-  padding-left: 0; 
-}
-.trust-inline li { 
-  list-style: none; 
+  list-style: none;     
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 0;               /* let bullets be the separators */
 }
 
-/* Optional: add spaced separators instead of bullets */
+.trust-inline li { 
+  list-style: none;
+}
+
+/* Separator bullets between items */
 .trust-inline li + li::before {
   content: "•";
-  margin: 1 rem;
+  margin: 0 .5rem;      /* space around the bullet */
   opacity: .9;
 }
+
 
 
 /* ---------- Sections ---------- */
