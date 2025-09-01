@@ -92,9 +92,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 /* ---------- Hero ---------- */
 .hero{position:relative;color:#fff;min-height:clamp(380px,60vh,640px);overflow:hidden}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%;z-index:0}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35))
-}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35))}
 .hero-inner{position:relative;z-index:2;text-align:center;padding:clamp(64px,8vw,130px) 0}
 .hero-title{color:#fff}
 .hero-sub{color:#e6fffe;margin:.35rem 0 0}
@@ -102,21 +100,9 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .trust-inline{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:.9rem 0 0;padding:0;color:#e6fffe;font-weight:700;opacity:.95}
 
 /* Trust line: prevent bullet overlap */
-.trust-inline { 
-  list-style: none;     
-  padding-left: 0;
-  margin: 0;
-  display: flex;
-  gap: 0;               /* let bullets be the separators */
-}
+.trust-inline { list-style: none; padding-left: 0; margin: 0; display: flex; gap: 0; }
 .trust-inline li { list-style: none; }
-
-/* Separator bullets between items */
-.trust-inline li + li::before {
-  content: "•";
-  margin: 0 .5rem;
-  opacity: .9;
-}
+.trust-inline li + li::before { content: "•"; margin: 0 .5rem; opacity: .9; }
 
 /* ---------- Sections ---------- */
 .section{padding:clamp(28px,5vw,56px) 0}
@@ -130,15 +116,22 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .card.pro h3{margin:.7rem 0 .25rem}
 .card.pro p{color:var(--muted);margin:0}
 
-/* Services (icons) */
+/* Services (icons, updated to stroke style) */
 .card.pro .pro-icon{
   display:grid;place-items:center;width:100%;aspect-ratio:16/10;
   border:1px solid var(--line);border-radius:12px;
   background:linear-gradient(180deg,#ffffff, var(--bg-soft));box-shadow:var(--shadow-inset);margin:0 0 .7rem;
 }
-.card.pro .pro-icon svg{width:90px;height:90px;fill:var(--brand)}
-.card.pro .pro-icon-alt svg{fill:var(--brand-2)}
-.card.pro .pro-icon-soft{background:linear-gradient(180deg,#fff,#f7fafb)}
+.card.pro .pro-icon svg{
+  width:90px;height:90px;
+  fill:none;
+  stroke:var(--brand);
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.card.pro .pro-icon-alt svg{ stroke:var(--brand-2) }
+.card.pro .pro-icon-soft{ background:linear-gradient(180deg,#fff,#f7fafb) }
 
 /* ---------- Feature band ---------- */
 .feature{background:linear-gradient(180deg,#fff, var(--bg-soft));border-block:1px solid var(--line)}
@@ -231,18 +224,18 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
 }
 
-/* --- FAQ (single, non-duplicated) --- */
+/* --- FAQ --- */
 .faq{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;background:#fff;margin:.6rem 0;box-shadow:var(--shadow)}
 .faq > summary{cursor:pointer;font-weight:800;list-style:none}
 .faq > summary::-webkit-details-marker{display:none}
 .faq[open]{background:linear-gradient(180deg,#fff,#f9fcfd)}
 .faq-a{color:var(--ink-2);margin-top:.5rem}
 
-/* --- Hero picture wrapper (single, non-duplicated) --- */
+/* --- Hero picture wrapper --- */
 .hero picture{position:absolute;inset:0;z-index:0}
 .hero picture img.hero-bg{width:100%;height:100%;object-fit:cover;object-position:50% 24%}
 
-/* --- Sticky mobile CTA (single, non-duplicated) --- */
+/* --- Sticky mobile CTA --- */
 .mobile-cta{
   position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;justify-content:space-between;
   padding:10px 14px;background:rgba(15,23,42,.9);backdrop-filter:saturate(140%) blur(6px);
@@ -254,7 +247,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;text-decoration:none
 }
 .mobile-cta-btn.outline{background:transparent;border-color:#cfeff2;color:#cfeff2}
-@media (max-width:760px){ .mobile-cta{display:flex} body{padding-bottom:70px} } /* body padding prevents overlap */
+@media (max-width:760px){ .mobile-cta{display:flex} body{padding-bottom:70px} }
 
 /* --- Header Contact button refinement --- */
 .nav .btn{
@@ -264,42 +257,22 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 }
 .nav .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 
-/* --- Button edge colour fix (paste at end) --- */
+/* --- Button edge colour fix --- */
 .btn,
 .mobile-cta-btn,
-.nav .btn{
-  border: 0;                 /* stop transparent-border halo */
-  background-clip: padding-box;
-}
-
-/* Solid brand buttons */
+.nav .btn{ border: 0; background-clip: padding-box; }
 .btn-solid,
-.mobile-cta-btn{
-  background-image: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 120%);
-}
-
-/* Header "Contact" button (keeps your orange look, fixes the edge) */
-.nav .btn{
-  background-image: linear-gradient(90deg, #e27935 0%, #b75536 120%);
-}
-
-/* Outline stays outlined (explicitly restore its border) */
-.btn-outline{
-  border: 2px solid var(--brand);
-  background-clip: border-box;
-}
-
+.mobile-cta-btn{ background-image: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 120%); }
+.nav .btn{ background-image: linear-gradient(90deg, #e27935 0%, #b75536 120%); }
+.btn-outline{ border: 2px solid var(--brand); background-clip: border-box; }
 .btn:hover,
 .mobile-cta-btn:hover,
-.nav .btn:hover{
-  transform: translateY(-1px);
-}
+.nav .btn:hover{ transform: translateY(-1px); }
 
-/* --- Mobile fixes: prevent bullets/icons overlapping text --- */
+/* --- Mobile fixes --- */
 @media (max-width: 600px){
   .grid-4 { display: block !important; }
   .grid-4 .card.pro { display: block; margin-bottom: 1rem; }
-
   .pro .pro-icon,
   .pro .pro-icon-alt,
   .pro .pro-icon-soft {
@@ -308,7 +281,6 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
     margin: 0 0 .5rem 0;
     transform: none !important;
   }
-
   .ticks li,
   .trust-inline li,
   .areas-grid li {
