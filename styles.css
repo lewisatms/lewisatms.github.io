@@ -91,7 +91,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;color:#fff;min-height:clamp(380px,60vh,640px);overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% center;z-index:0}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%;z-index:0}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35))
 }
@@ -109,19 +109,14 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   display: flex;
   gap: 0;               /* let bullets be the separators */
 }
-
-.trust-inline li { 
-  list-style: none;
-}
+.trust-inline li { list-style: none; }
 
 /* Separator bullets between items */
 .trust-inline li + li::before {
   content: "•";
-  margin: 0 .5rem;      /* space around the bullet */
+  margin: 0 .5rem;
   opacity: .9;
 }
-
-
 
 /* ---------- Sections ---------- */
 .section{padding:clamp(28px,5vw,56px) 0}
@@ -245,7 +240,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 
 /* --- Hero picture wrapper (single, non-duplicated) --- */
 .hero picture{position:absolute;inset:0;z-index:0}
-.hero picture img.hero-bg{width:100%;height:100%;object-fit:cover;object-position:68% center}
+.hero picture img.hero-bg{width:100%;height:100%;object-fit:cover;object-position:50% 24%}
 
 /* --- Sticky mobile CTA (single, non-duplicated) --- */
 .mobile-cta{
@@ -274,7 +269,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .btn,
 .mobile-cta-btn,
 .nav .btn{
-  border: 0;                 /* stop transparent-border halo */
+  border: 0;
   background-clip: padding-box;
 }
 
@@ -302,29 +297,11 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   transform: translateY(-1px);
 }
 
-/* --- Banner (hero) image focus moved up --- */
-/* Lift the focal point on wide screens; nudge differently on mobile */
-.hero picture img.hero-bg{
-  object-position: 50% 24%;  /* was 68% center; show more upper area */
-}
-@media (max-width: 760px){
-  .hero picture img.hero-bg{
-    object-position: 50% 34%;
-  }
-}
-
 /* --- Mobile fixes: prevent bullets/icons overlapping text --- */
 @media (max-width: 600px){
-  /* Stack the service cards in a single column */
-  .grid-4 { 
-    display: block !important;
-  }
-  .grid-4 .card.pro {
-    display: block;
-    margin-bottom: 1rem;
-  }
+  .grid-4 { display: block !important; }
+  .grid-4 .card.pro { display: block; margin-bottom: 1rem; }
 
-  /* Make the service "pro-icon" behave like a normal block, not absolutely positioned */
   .pro .pro-icon,
   .pro .pro-icon-alt,
   .pro .pro-icon-soft {
@@ -334,7 +311,6 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
     transform: none !important;
   }
 
-  /* Ensure any list with decorative bullets doesn't overlap copy */
   .ticks li,
   .trust-inline li,
   .areas-grid li {
@@ -344,7 +320,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
   .ticks li::before,
   .trust-inline li::before,
   .areas-grid li::before {
-    position: static !important;   /* stop absolutely-positioned bullets */
+    position: static !important;
     margin-right: .5rem;
   }
 }
