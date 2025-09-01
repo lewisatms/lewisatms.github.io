@@ -123,15 +123,6 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .card.pro .pro-icon-alt svg{fill:var(--brand-2)}
 .card.pro .pro-icon-soft{background:linear-gradient(180deg,#fff,#f7fafb)}
 
-}
-
-/* On mobile (screen ≤ 600px wide) */
-@media (max-width: 600px) {
-  .pro-icon {
-    width: 120px;   /* bigger */
-    height: 120px;
-  }
-  
 /* ---------- Feature band ---------- */
 .feature{background:linear-gradient(180deg,#fff, var(--bg-soft));border-block:1px solid var(--line)}
 .feature-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
