@@ -101,6 +101,23 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .hero-cta{display:flex;gap:12px;justify-content:center;margin-top:14px;flex-wrap:wrap}
 .trust-inline{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:.9rem 0 0;padding:0;color:#e6fffe;font-weight:700;opacity:.95}
 
+/* Trust line: prevent bullet overlap */
+.trust-inline { 
+  list-style: none;          /* kill native bullets */
+  padding-left: 0; 
+}
+.trust-inline li { 
+  list-style: none; 
+}
+
+/* Optional: add spaced separators instead of bullets */
+.trust-inline li + li::before {
+  content: "•";
+  margin: 0 .5rem;
+  opacity: .9;
+}
+
+
 /* ---------- Sections ---------- */
 .section{padding:clamp(28px,5vw,56px) 0}
 .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
