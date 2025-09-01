@@ -116,22 +116,17 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .card.pro h3{margin:.7rem 0 .25rem}
 .card.pro p{color:var(--muted);margin:0}
 
-/* Services (icons, updated to stroke style) */
+/* Services (icons) — filled, bolder look */
 .card.pro .pro-icon{
   display:grid;place-items:center;width:100%;aspect-ratio:16/10;
   border:1px solid var(--line);border-radius:12px;
-  background:linear-gradient(180deg,#ffffff, var(--bg-soft));box-shadow:var(--shadow-inset);margin:0 0 .7rem;
+  background:linear-gradient(180deg,#ffffff, var(--bg-soft));box-shadow:var(--shadow-inset);
+  margin:0 0 .7rem;
 }
-.card.pro .pro-icon svg{
-  width:90px;height:90px;
-  fill:none;
-  stroke:var(--brand);
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-.card.pro .pro-icon-alt svg{ stroke:var(--brand-2) }
-.card.pro .pro-icon-soft{ background:linear-gradient(180deg,#fff,#f7fafb) }
+.card.pro .pro-icon svg{width:84px;height:84px;fill:var(--brand)}
+.card.pro .pro-icon-alt svg{fill:var(--brand-2)}
+.card.pro .pro-icon-soft{background:linear-gradient(180deg,#fff,#f7fafb)}
+
 
 /* ---------- Feature band ---------- */
 .feature{background:linear-gradient(180deg,#fff, var(--bg-soft));border-block:1px solid var(--line)}
