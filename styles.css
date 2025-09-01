@@ -113,7 +113,7 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 /* Optional: add spaced separators instead of bullets */
 .trust-inline li + li::before {
   content: "•";
-  margin: 0 .5rem;
+  margin: 0 .25rem;
   opacity: .9;
 }
 
