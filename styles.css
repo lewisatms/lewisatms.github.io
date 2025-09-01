@@ -205,4 +205,126 @@ h3{font-size:clamp(1.05rem,2.4vw,1.25rem)}
 .foot-list{padding-left:0;margin:0}
 .foot-list li{list-style:none;margin:.25rem 0;border-bottom:1px solid rgba(255,255,255,.08);padding:.25rem 0}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.12);color:#cbd5e1}
-.toplink{color:#cfeff2;font-weigh
+.toplink{color:#cfeff2;font-weight:700}
+.toplink:hover{color:#fff}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature-inner{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .contact-grid{grid-template-columns:1fr}
+  .cta-row{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:760px){
+  .nav{display:none;position:absolute;right:16px;top:76px;flex-direction:column;background:#fff;border:1px solid var(--line);padding:10px;border-radius:12px;box-shadow:var(--shadow)}
+  .nav a{padding:.5rem .7rem}
+  .nav .btn{margin:6px 0 0}
+  .nav-burger{display:flex}
+  .brand img{height:72px}
+  .areas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-form{grid-template-columns:1fr}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+}
+
+/* --- FAQ (single, non-duplicated) --- */
+.faq{border:1px solid var(--line);border-radius:12px;padding:.6rem .9rem;background:#fff;margin:.6rem 0;box-shadow:var(--shadow)}
+.faq > summary{cursor:pointer;font-weight:800;list-style:none}
+.faq > summary::-webkit-details-marker{display:none}
+.faq[open]{background:linear-gradient(180deg,#fff,#f9fcfd)}
+.faq-a{color:var(--ink-2);margin-top:.5rem}
+
+/* --- Hero picture wrapper (single, non-duplicated) --- */
+.hero picture{position:absolute;inset:0;z-index:0}
+.hero picture img.hero-bg{width:100%;height:100%;object-fit:cover;object-position:50% 24%}
+
+/* --- Sticky mobile CTA (single, non-duplicated) --- */
+.mobile-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;justify-content:space-between;
+  padding:10px 14px;background:rgba(15,23,42,.9);backdrop-filter:saturate(140%) blur(6px);
+  border-top:1px solid rgba(255,255,255,.1)
+}
+.mobile-cta-btn{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;
+  padding:.8rem 1rem;border-radius:999px;font-weight:900;border:2px solid transparent;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;text-decoration:none
+}
+.mobile-cta-btn.outline{background:transparent;border-color:#cfeff2;color:#cfeff2}
+@media (max-width:760px){ .mobile-cta{display:flex} body{padding-bottom:70px} } /* body padding prevents overlap */
+
+/* --- Header Contact button refinement --- */
+.nav .btn{
+  padding:.5rem 1.1rem;border-radius:999px;font-weight:800;
+  background:linear-gradient(90deg,#e27935,#b75536);
+  color:#fff !important;box-shadow:0 3px 6px rgba(0,0,0,.15)
+}
+.nav .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+
+/* --- Button edge colour fix (paste at end) --- */
+.btn,
+.mobile-cta-btn,
+.nav .btn{
+  border: 0;                 /* stop transparent-border halo */
+  background-clip: padding-box;
+}
+
+/* Solid brand buttons */
+.btn-solid,
+.mobile-cta-btn{
+  background-image: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 120%);
+}
+
+/* Header "Contact" button (keeps your orange look, fixes the edge) */
+.nav .btn{
+  background-image: linear-gradient(90deg, #e27935 0%, #b75536 120%);
+}
+
+/* Outline stays outlined (explicitly restore its border) */
+.btn-outline{
+  border: 2px solid var(--brand);
+  background-clip: border-box;
+}
+
+.btn:hover,
+.mobile-cta-btn:hover,
+.nav .btn:hover{
+  transform: translateY(-1px);
+}
+
+/* --- Mobile fixes: prevent bullets/icons overlapping text --- */
+@media (max-width: 600px){
+  .grid-4 { display: block !important; }
+  .grid-4 .card.pro { display: block; margin-bottom: 1rem; }
+
+  .pro .pro-icon,
+  .pro .pro-icon-alt,
+  .pro .pro-icon-soft {
+    position: static !important;
+    display: inline-block;
+    margin: 0 0 .5rem 0;
+    transform: none !important;
+  }
+
+  .ticks li,
+  .trust-inline li,
+  .areas-grid li {
+    position: relative;
+    overflow: hidden;
+  }
+  .ticks li::before,
+  .trust-inline li::before,
+  .areas-grid li::before {
+    position: static !important;
+    margin-right: .5rem;
+  }
+}
+
+/* Safety net */
+.card.pro, .feature-copy, .feature-media, .section {
+  z-index: 1;
+  position: relative;
+}
