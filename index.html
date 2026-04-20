@@ -3,51 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-H Autoworks | Vehicle Repairs</title>
+    <title>N-H Autoworks | Professional Vehicle Repairs</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo-container">
             <img src="assets/Logo.jpg" alt="N-H Autoworks Logo" class="logo">
         </div>
         <div class="contact-info">
-            <p>📞 07595 195184</p>
-            <p>✉️ nhautoworks26@gmail.com</p>
+            <a href="tel:07595195184" class="contact-link">📞 07595 195184</a>
+            <a href="mailto:nhautoworks26@gmail.com" class="contact-link">✉️ nhautoworks26@gmail.com</a>
         </div>
     </header>
 
-    <section class="hero" style="background-image: url('assets/photo1.jpg');">
-        <div class="hero-overlay">
+    <section class="hero" style="background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.8)), url('assets/photo1.jpg');">
+        <div class="hero-content">
             <h1>Start the New Year with Confidence</h1>
-            <p>Servicing • Repairs • Maintenance</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+            <p class="subtitle">Servicing • Repairs • Maintenance</p>
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <section class="services">
-        <h2>Professional Vehicle Repairs</h2>
-        <div class="service-content">
-            <div class="service-text">
-                <p>Welcome to N-H Autoworks. Established in 2026, we provide reliable, high-quality vehicle servicing and repairs to keep you safely on the road.</p>
-                <ul>
-                    <li>Comprehensive Servicing & Maintenance</li>
-                    <li>Engine & Transmission Repairs</li>
-                    <li>Brake & Tire Replacements</li>
-                    <li>Advanced Vehicle Diagnostics</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/photo2.jpg" alt="Mechanic changing tire">
+        <div class="container">
+            <h2 class="section-title">Professional Vehicle Repairs</h2>
+            <div class="services-grid">
+                <div class="service-text">
+                    <p class="lead">Welcome to N-H Autoworks. Established in 2026, we provide reliable, high-quality vehicle servicing and repairs to keep you safely on the road.</p>
+                    <ul class="service-list">
+                        <li>Comprehensive Servicing & Maintenance</li>
+                        <li>Engine & Transmission Repairs</li>
+                        <li>Brake & Tire Replacements</li>
+                        <li>Advanced Vehicle Diagnostics</li>
+                    </ul>
+                </div>
+                <div class="service-image-wrapper">
+                    <img src="assets/photo2.jpg" alt="Mechanic changing tire" class="service-image">
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h2>Visit Us</h2>
-        <p>📍 Frys Garage, Tedburn Saint Mary, United Kingdom, Ex6 6EB</p>
-        <p>📞 07595 195184 | ✉️ nhautoworks26@gmail.com</p>
-        <p class="copyright">&copy; 2026 N-H Autoworks. All rights reserved.</p>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2 class="footer-title">Visit Us</h2>
+            <div class="footer-details">
+                <p>📍 Frys Garage, Tedburn Saint Mary, UK, Ex6 6EB</p>
+                <p>📞 <a href="tel:07595195184">07595 195184</a></p>
+                <p>✉️ <a href="mailto:nhautoworks26@gmail.com">nhautoworks26@gmail.com</a></p>
+            </div>
+            <p class="copyright">&copy; 2026 N-H Autoworks. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
