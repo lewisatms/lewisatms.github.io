@@ -1,4 +1,4 @@
-# MJH Plumbing & Heating — Static Site
+# N-H Autoworks — Static Site
 
 Upload the contents of this folder to a GitHub repository and enable **GitHub Pages** (Settings → Pages → Branch: `main`, Folder: `/root`).
 
